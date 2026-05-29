@@ -234,18 +234,18 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {SERVICES.map((service, i) => (
               <ScrollReveal key={service.title} delay={i * 80}>
-                <div className="group bg-warm-white p-8 rounded-2xl border border-cream-dark card-hover cursor-pointer relative overflow-hidden">
+                <div className="group bg-warm-white p-8 rounded-2xl border border-cream-dark card-hover cursor-pointer relative overflow-hidden h-full flex flex-col">
                   {/* Hover gradient border effect */}
                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold/10 via-transparent to-plum/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                  <div className="relative">
-                    <div className="w-14 h-14 rounded-xl bg-plum/5 flex items-center justify-center text-plum mb-6 group-hover:bg-plum group-hover:text-cream group-hover:scale-110 transition-all duration-400">
+                  <div className="relative flex flex-col h-full">
+                    <div className="w-14 h-14 rounded-xl bg-plum/5 flex items-center justify-center text-plum mb-6 group-hover:bg-plum group-hover:text-cream group-hover:scale-110 transition-all duration-400 shrink-0">
                       {iconMap[service.icon]}
                     </div>
                     <h3 className="font-serif text-xl font-semibold text-text-primary mb-3 group-hover:text-plum transition-colors duration-300">
                       {service.title}
                     </h3>
-                    <p className="text-text-muted text-sm leading-relaxed">
+                    <p className="text-text-muted text-sm leading-relaxed flex-1">
                       {service.description}
                     </p>
 
