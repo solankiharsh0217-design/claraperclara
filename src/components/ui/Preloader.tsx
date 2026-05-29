@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Preloader() {
   const [loading, setLoading] = useState(true);
@@ -27,15 +28,16 @@ export default function Preloader() {
         {/* Decorative line top */}
         <div className="w-12 h-px bg-gold mx-auto mb-8 animate-fade-in" />
 
-        {/* Brand name */}
-        <h1 className="font-serif text-5xl md:text-6xl text-cream font-semibold tracking-wide animate-fade-in-up">
-          ClaraPerClara
-        </h1>
-
-        {/* Subtitle */}
-        <p className="text-gold text-xs tracking-[0.5em] uppercase mt-4 animate-fade-in-up delay-200">
-          Hair & Beauty
-        </p>
+        {/* Logo */}
+        <div className="animate-fade-in-up">
+          <Image
+            src="/images/Logo-Clara-per-Clara-Hair-Beauty-300x70px1.png"
+            alt="ClaraPerClara Logo"
+            width={240}
+            height={56}
+            className="h-14 w-auto brightness-0 invert mx-auto"
+          />
+        </div>
 
         {/* Loading dots */}
         <div className="flex gap-2 justify-center mt-10">

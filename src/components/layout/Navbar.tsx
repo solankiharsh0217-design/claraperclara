@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { SITE, NAV_LINKS } from "@/lib/constants";
 import { Menu, X, Phone } from "lucide-react";
@@ -35,21 +36,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex flex-col group">
-            <span
-              className={`font-serif text-2xl md:text-3xl font-semibold tracking-wide transition-colors duration-500 ${
-                scrolled ? "text-plum" : "text-white"
+          <Link href="/" className="flex items-center shrink-0">
+            <Image
+              src="/images/Logo-Clara-per-Clara-Hair-Beauty-300x70px1.png"
+              alt="ClaraPerClara Logo"
+              width={160}
+              height={37}
+              className={`h-9 w-auto transition-all duration-500 ${
+                scrolled ? "" : "mix-blend-screen brightness-0 invert"
               }`}
-            >
-              {SITE.name}
-            </span>
-            <span
-              className={`text-[10px] tracking-[0.3em] uppercase font-light transition-colors duration-500 ${
-                scrolled ? "text-gold" : "text-white/70"
-              }`}
-            >
-              Hair & Beauty
-            </span>
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}

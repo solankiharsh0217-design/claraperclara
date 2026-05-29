@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE, NAV_LINKS } from "@/lib/constants";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { InstagramIcon, FacebookIcon } from "@/components/ui/SocialIcons";
@@ -11,12 +12,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <h3 className="font-serif text-3xl font-semibold text-cream mb-2">
-              {SITE.name}
-            </h3>
-            <p className="text-xs tracking-[0.3em] uppercase text-gold mb-4">
-              Hair & Beauty
-            </p>
+            <Image
+              src="/images/Logo-Clara-per-Clara-Hair-Beauty-300x70px1.png"
+              alt="ClaraPerClara Logo"
+              width={180}
+              height={42}
+              className="h-10 w-auto brightness-0 invert opacity-90 mb-4"
+            />
             <p className="text-sm leading-relaxed text-cream/60">
               {SITE.tagline}
             </p>
