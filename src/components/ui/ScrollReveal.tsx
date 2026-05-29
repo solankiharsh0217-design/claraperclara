@@ -41,6 +41,8 @@ export default function ScrollReveal({
     switch (direction) {
       case "left":
         return "animate-slide-in-left";
+      case "right":
+        return "animate-slide-in-right";
       case "scale":
         return "animate-scale-in";
       case "up":

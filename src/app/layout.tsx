@@ -4,6 +4,9 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import Preloader from "@/components/ui/Preloader";
+import ScrollProgress from "@/components/ui/ScrollProgress";
+import FloatingDecorations from "@/components/ui/FloatingDecorations";
 
 const cormorant = Cormorant({
   subsets: ["latin"],
@@ -51,8 +54,11 @@ export default function RootLayout({
   return (
     <html lang="it" className={`${cormorant.variable} ${montserrat.variable}`}>
       <body className="font-sans antialiased">
+        <Preloader />
+        <ScrollProgress />
+        <FloatingDecorations />
         <Navbar />
-        <main>{children}</main>
+        <main className="relative z-10">{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>
